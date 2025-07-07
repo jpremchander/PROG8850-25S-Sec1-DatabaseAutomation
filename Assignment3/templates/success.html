@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Success - Registration Complete{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h2 class="mb-0">
+            <i class="fas fa-check-circle me-2"></i>
+            Registration Successful!
+        </h2>
+    </div>
+    <div class="card-body p-4 text-center">
+        <div class="mb-4">
+            <i class="fas fa-user-check text-success" style="font-size: 4rem;"></i>
+        </div>
+        
+        <h4 class="text-success mb-3">Welcome!</h4>
+        <p class="lead">Your account has been created successfully.</p>
+        
+        <div class="alert alert-success" role="alert">
+            <i class="fas fa-info-circle me-2"></i>
+            <strong>User ID:</strong> {{ user_id }}
+        </div>
+        
+        <div class="mt-4">
+            <a href="{{ url_for('index') }}" class="btn btn-primary">
+                <i class="fas fa-plus me-2"></i>
+                Register Another User
+            </a>
+        </div>
+        
+        <div class="mt-3">
+            <small class="text-muted">
+                <i class="fas fa-database me-1"></i>
+                Your data has been securely stored in the MySQL database
+            </small>
+        </div>
+    </div>
+</div>
+{% endblock %}
